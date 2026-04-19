@@ -10,8 +10,7 @@
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.min.css">
+
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -255,16 +254,16 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
 
 <section class="hero">
   <div class="hero-left">
-    <h1 class="hero-headline" data-splitting>The bank that works as hard as you do.</h1>
+    <h1 class="hero-headline">The bank that works as hard as you do.</h1>
     <div class="typed-wrap"><span id="typed-tagline"></span></div>
     <div class="trust-badges">
-      <div class="trust-badge"><i class="ph-bold ph-shield-check"></i> RBI Licensed</div>
-      <div class="trust-badge"><i class="ph-bold ph-lightning"></i> Instant UPI</div>
-      <div class="trust-badge"><i class="ph-bold ph-flag"></i> Made in India</div>
+      <div class="trust-badge"><i class="fa-solid fa-shield-halved"></i> RBI Licensed</div>
+      <div class="trust-badge"><i class="fa-solid fa-bolt"></i> Instant UPI</div>
+      <div class="trust-badge"><i class="fa-solid fa-flag"></i> Made in India</div>
     </div>
     <div class="hero-ctas">
-      <button class="btn btn-primary" onclick="navigateTo('create')"><i class="ph-bold ph-user-plus"></i> Open Free Account</button>
-      <button class="btn btn-outline" onclick="navigateTo('login')"><i class="ph-bold ph-sign-in"></i> Sign In</button>
+      <button class="btn btn-primary" onclick="navigateTo('create')"><i class="fa-solid fa-user-plus"></i> Open Free Account</button>
+      <button class="btn btn-outline" onclick="navigateTo('login')"><i class="fa-solid fa-right-to-bracket"></i> Sign In</button>
     </div>
   </div>
   <div class="hero-right">
@@ -277,7 +276,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
       <div class="card">
         <div class="card-label">Savings Account</div>
         <div class="card-number">₹1,24,500.00</div>
-        <div class="card-bottom"><span>+₹12,400 this month</span><span><i class="ph-bold ph-trend-up"></i></span></div>
+        <div class="card-bottom"><span>+₹12,400 this month</span><span><i class="fa-solid fa-arrow-trend-up"></i></span></div>
       </div>
       <div class="card">
         <div class="card-label">Quick Transfer</div>
@@ -290,27 +289,27 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
 
 <section class="features" id="features-section">
   <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
-    <i class="ph-bold ph-shield-check"></i>
+    <i class="fa-solid fa-shield-halved"></i>
     <h3>Bank-Grade Security</h3>
     <p>256-bit encryption, biometric auth, and real-time fraud monitoring protect every transaction you make.</p>
   </div>
   <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-    <i class="ph-bold ph-lightning"></i>
+    <i class="fa-solid fa-bolt"></i>
     <h3>Instant Everything</h3>
     <p>Open an account in 3 minutes. Transfer money in 3 seconds. No paperwork, no waiting.</p>
   </div>
   <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-    <i class="ph-bold ph-chart-line-up"></i>
+    <i class="fa-solid fa-chart-line"></i>
     <h3>Smart Insights</h3>
     <p>AI-powered spending analytics and savings goals that adapt to your lifestyle automatically.</p>
   </div>
 </section>
 
 <section class="stats-bar" id="stats-section">
-  <div class="stat-item"><div class="stat-number" id="stat-1">0</div><div class="stat-label">Total Deposits</div></div>
+  <div class="stat-item"><div class="stat-number" id="stat-1">0</div><div class="stat-label">Total Balance</div></div>
   <div class="stat-item"><div class="stat-number" id="stat-2">0</div><div class="stat-label">Active Accounts</div></div>
   <div class="stat-item"><div class="stat-number" id="stat-3">0</div><div class="stat-label">Uptime</div></div>
-  <div class="stat-item"><div class="stat-number" id="stat-4">0</div><div class="stat-label">Fraud Cases</div></div>
+  <div class="stat-item"><div class="stat-number" id="stat-4">0</div><div class="stat-label">Total Transactions</div></div>
 </section>
 
 <footer class="footer">© 2026 NexaBank. All rights reserved. Licensed by RBI.</footer>
@@ -322,7 +321,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
   <a class="nav-logo" href="#" onclick="navigateTo('landing')">
     <div class="nav-monogram">NB</div><span class="nav-wordmark">NexaBank</span>
   </a>
-  <button class="btn btn-ghost btn-sm" onclick="navigateTo('landing')"><i class="ph-bold ph-arrow-left"></i> Back</button>
+  <button class="btn btn-ghost btn-sm" onclick="navigateTo('landing')"><i class="fa-solid fa-arrow-left"></i> Back</button>
 </div>
 <div class="create-layout">
   <div class="step-sidebar">
@@ -335,7 +334,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
 
     <!-- Step 1 -->
     <div class="step-panel active" id="step-1">
-      <h2 data-splitting>Personal Details</h2>
+      <h2>Personal Details</h2>
       <p style="color:var(--ink-muted);margin:8px 0 32px">Tell us about yourself.</p>
       <div class="form-group">
         <label>Full Name</label>
@@ -376,17 +375,17 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
       <div class="form-group" style="text-align:center">
         <label>Profile Photo</label>
         <div class="photo-upload" id="photo-upload" onclick="document.getElementById('photo-file').click()">
-          <i class="ph-bold ph-camera" id="photo-icon"></i>
+          <i class="fa-solid fa-camera" id="photo-icon"></i>
           <img id="photo-preview" style="display:none" alt="Profile">
         </div>
         <input type="file" id="photo-file" accept="image/*" style="display:none">
       </div>
-      <button class="btn btn-accent" style="width:100%;margin-top:16px" onclick="nextStep(1)">Continue <i class="ph-bold ph-arrow-right"></i></button>
+      <button class="btn btn-accent" style="width:100%;margin-top:16px" onclick="nextStep(1)">Continue <i class="fa-solid fa-arrow-right"></i></button>
     </div>
 
     <!-- Step 2 -->
     <div class="step-panel" id="step-2">
-      <h2 data-splitting>Identity & Address</h2>
+      <h2>Identity & Address</h2>
       <p style="color:var(--ink-muted);margin:8px 0 32px">We need this for KYC verification.</p>
       <div class="form-row">
         <div class="form-group">
@@ -430,14 +429,14 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
         <div class="error-msg" id="err-pin">Valid PIN code required</div>
       </div>
       <div style="display:flex;gap:12px;margin-top:24px">
-        <button class="btn btn-ghost" onclick="prevStep(2)"><i class="ph-bold ph-arrow-left"></i> Back</button>
-        <button class="btn btn-accent" style="flex:1" onclick="nextStep(2)">Continue <i class="ph-bold ph-arrow-right"></i></button>
+        <button class="btn btn-ghost" onclick="prevStep(2)"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <button class="btn btn-accent" style="flex:1" onclick="nextStep(2)">Continue <i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </div>
 
     <!-- Step 3 -->
     <div class="step-panel" id="step-3">
-      <h2 data-splitting>Account Setup</h2>
+      <h2>Account Setup</h2>
       <p style="color:var(--ink-muted);margin:8px 0 32px">Almost there! Set up your account.</p>
       <div class="form-group">
         <label>Username</label>
@@ -478,8 +477,8 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
         <div class="error-msg" id="err-mpin-confirm" style="text-align:center">MPINs do not match</div>
       </div>
       <div style="display:flex;gap:12px;margin-top:24px">
-        <button class="btn btn-ghost" onclick="prevStep(3)"><i class="ph-bold ph-arrow-left"></i> Back</button>
-        <button class="btn btn-primary" style="flex:1" onclick="createAccount()"><i class="ph-bold ph-check-circle"></i> Create Account</button>
+        <button class="btn btn-ghost" onclick="prevStep(3)"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <button class="btn btn-primary" style="flex:1" onclick="createAccount()"><i class="fa-solid fa-circle-check"></i> Create Account</button>
       </div>
     </div>
   </div>
@@ -492,14 +491,14 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
   <h1 id="success-title">Account Created!</h1>
   <p style="color:var(--ink-muted);font-size:18px;margin-top:8px" id="success-sub">Welcome to NexaBank. Your journey starts now.</p>
   <div class="success-card" id="success-card">
-    <div class="success-row"><span class="label">Account Number</span><span class="value" id="success-accno">—</span><button class="copy-btn" onclick="copyAccNo()"><i class="ph-bold ph-copy"></i></button></div>
+    <div class="success-row"><span class="label">Account Number</span><span class="value" id="success-accno">—</span><button class="copy-btn" onclick="copyAccNo()"><i class="fa-solid fa-copy"></i></button></div>
     <div class="success-row"><span class="label">Account Holder</span><span class="value" id="success-name">—</span></div>
     <div class="success-row"><span class="label">Account Type</span><span class="value" id="success-type">—</span></div>
     <div class="success-row"><span class="label">Opening Balance</span><span class="value" id="success-balance">—</span></div>
     <div class="success-row"><span class="label">Username</span><span class="value" id="success-username">—</span></div>
   </div>
   <div style="display:flex;gap:12px;margin-top:24px">
-    <button class="btn btn-accent" onclick="navigateTo('login')"><i class="ph-bold ph-sign-in"></i> Login Now</button>
+    <button class="btn btn-accent" onclick="navigateTo('login')"><i class="fa-solid fa-right-to-bracket"></i> Login Now</button>
     <button class="btn btn-outline" onclick="navigateTo('landing')">Back to Home</button>
   </div>
 </div>
@@ -541,20 +540,20 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
       <div class="nav-monogram">NB</div><span class="nav-wordmark">NexaBank</span>
     </div>
     <nav class="dash-nav">
-      <div class="dash-nav-item active" data-tab="overview" onclick="switchTab('overview')"><i class="ph-bold ph-house"></i> Overview</div>
-      <div class="dash-nav-item" data-tab="deposit" onclick="switchTab('deposit')"><i class="ph-bold ph-arrow-up"></i> Deposit</div>
-      <div class="dash-nav-item" data-tab="withdraw" onclick="switchTab('withdraw')"><i class="ph-bold ph-arrow-down"></i> Withdraw</div>
-      <div class="dash-nav-item" data-tab="statement" onclick="switchTab('statement')"><i class="ph-bold ph-receipt"></i> Statement</div>
-      <div class="dash-nav-item" data-tab="account" onclick="switchTab('account')"><i class="ph-bold ph-gear"></i> Account</div>
+      <div class="dash-nav-item active" data-tab="overview" onclick="switchTab('overview')"><i class="fa-solid fa-house"></i> Overview</div>
+      <div class="dash-nav-item" data-tab="deposit" onclick="switchTab('deposit')"><i class="fa-solid fa-arrow-up"></i> Deposit</div>
+      <div class="dash-nav-item" data-tab="withdraw" onclick="switchTab('withdraw')"><i class="fa-solid fa-arrow-down"></i> Withdraw</div>
+      <div class="dash-nav-item" data-tab="statement" onclick="switchTab('statement')"><i class="fa-solid fa-receipt"></i> Statement</div>
+      <div class="dash-nav-item" data-tab="account" onclick="switchTab('account')"><i class="fa-solid fa-gear"></i> Account</div>
     </nav>
     <div class="dash-logout">
-      <div class="dash-nav-item" onclick="doLogout()"><i class="ph-bold ph-sign-out"></i> Logout</div>
+      <div class="dash-nav-item" onclick="doLogout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</div>
     </div>
   </aside>
   <main class="dash-main" id="dash-main">
     <div class="dash-topbar">
       <div class="dash-greeting"><span id="dash-greet-time">Good morning</span>,<strong id="dash-greet-name">User</strong></div>
-      <div class="dash-avatar" id="dash-avatar"><i class="ph-bold ph-user" style="font-size:22px;color:var(--ink-muted);padding:11px"></i></div>
+      <div class="dash-avatar" id="dash-avatar"><i class="fa-solid fa-user" style="font-size:22px;color:var(--ink-muted);padding:11px"></i></div>
     </div>
     <div class="balance-card" id="balance-card-el">
       <div class="balance-label">Total Balance</div>
@@ -565,9 +564,9 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
     <!-- Tab: Overview -->
     <div class="dash-tab-content active" id="tab-overview">
       <div class="dash-grid">
-        <div class="stat-card"><div class="stat-icon" style="background:rgba(27,79,255,.08);color:var(--accent)"><i class="ph-bold ph-arrow-up"></i></div><h4>Total Deposited</h4><div class="stat-value" id="stat-deposited">₹0</div></div>
-        <div class="stat-card"><div class="stat-icon" style="background:rgba(220,38,38,.08);color:var(--danger)"><i class="ph-bold ph-arrow-down"></i></div><h4>Total Withdrawn</h4><div class="stat-value" id="stat-withdrawn">₹0</div></div>
-        <div class="stat-card"><div class="stat-icon" style="background:rgba(22,163,74,.08);color:var(--success)"><i class="ph-bold ph-receipt"></i></div><h4>Transactions</h4><div class="stat-value" id="stat-txncount">0</div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(27,79,255,.08);color:var(--accent)"><i class="fa-solid fa-arrow-up"></i></div><h4>Total Deposited</h4><div class="stat-value" id="stat-deposited">₹0</div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(220,38,38,.08);color:var(--danger)"><i class="fa-solid fa-arrow-down"></i></div><h4>Total Withdrawn</h4><div class="stat-value" id="stat-withdrawn">₹0</div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(22,163,74,.08);color:var(--success)"><i class="fa-solid fa-receipt"></i></div><h4>Transactions</h4><div class="stat-value" id="stat-txncount">0</div></div>
       </div>
       <div class="chart-container"><h3>Monthly Activity</h3><div class="chart-wrap"><canvas id="activity-chart"></canvas></div></div>
       <div class="stat-card"><h3 style="margin-bottom:16px">Recent Transactions</h3>
@@ -578,7 +577,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
     <!-- Tab: Deposit -->
     <div class="dash-tab-content" id="tab-deposit">
       <div class="dash-form-card">
-        <h3><i class="ph-bold ph-arrow-up" style="color:var(--accent)"></i> Deposit Money</h3>
+        <h3><i class="fa-solid fa-arrow-up" style="color:var(--accent)"></i> Deposit Money</h3>
         <div class="form-group"><label>Amount</label><input type="number" class="form-input" id="inp-dep-amount" placeholder="Enter amount" min="1"></div>
         <button class="btn btn-accent" style="width:100%" onclick="doDeposit()">Deposit</button>
       </div>
@@ -587,7 +586,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
     <!-- Tab: Withdraw -->
     <div class="dash-tab-content" id="tab-withdraw">
       <div class="dash-form-card">
-        <h3><i class="ph-bold ph-arrow-down" style="color:var(--danger)"></i> Withdraw Money</h3>
+        <h3><i class="fa-solid fa-arrow-down" style="color:var(--danger)"></i> Withdraw Money</h3>
         <div class="form-group"><label>Amount</label><input type="number" class="form-input" id="inp-wd-amount" placeholder="Enter amount" min="1"></div>
         <button class="btn btn-danger" style="width:100%" onclick="doWithdraw()">Withdraw</button>
       </div>
@@ -606,7 +605,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
         <h3 style="margin-bottom:24px">Account Information</h3>
         <div class="account-info-grid" id="account-info-grid"></div>
         <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--border)">
-          <button class="btn btn-danger btn-sm" onclick="confirmCloseAccount()"><i class="ph-bold ph-trash"></i> Close Account</button>
+          <button class="btn btn-danger btn-sm" onclick="confirmCloseAccount()"><i class="fa-solid fa-trash"></i> Close Account</button>
         </div>
       </div>
     </div>
@@ -615,11 +614,11 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
   <!-- Mobile Bottom Tabs -->
   <div class="bottom-tabs">
     <div class="bottom-tabs-inner">
-      <div class="bottom-tab active" data-tab="overview" onclick="switchTab('overview')"><i class="ph-bold ph-house"></i><span>Home</span></div>
-      <div class="bottom-tab" data-tab="deposit" onclick="switchTab('deposit')"><i class="ph-bold ph-arrow-up"></i><span>Deposit</span></div>
-      <div class="bottom-tab" data-tab="withdraw" onclick="switchTab('withdraw')"><i class="ph-bold ph-arrow-down"></i><span>Withdraw</span></div>
-      <div class="bottom-tab" data-tab="statement" onclick="switchTab('statement')"><i class="ph-bold ph-receipt"></i><span>History</span></div>
-      <div class="bottom-tab" data-tab="account" onclick="switchTab('account')"><i class="ph-bold ph-gear"></i><span>Account</span></div>
+      <div class="bottom-tab active" data-tab="overview" onclick="switchTab('overview')"><i class="fa-solid fa-house"></i><span>Home</span></div>
+      <div class="bottom-tab" data-tab="deposit" onclick="switchTab('deposit')"><i class="fa-solid fa-arrow-up"></i><span>Deposit</span></div>
+      <div class="bottom-tab" data-tab="withdraw" onclick="switchTab('withdraw')"><i class="fa-solid fa-arrow-down"></i><span>Withdraw</span></div>
+      <div class="bottom-tab" data-tab="statement" onclick="switchTab('statement')"><i class="fa-solid fa-receipt"></i><span>History</span></div>
+      <div class="bottom-tab" data-tab="account" onclick="switchTab('account')"><i class="fa-solid fa-gear"></i><span>Account</span></div>
     </div>
   </div>
 </div>
@@ -641,9 +640,9 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
 <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/imask@7.6.0/dist/imask.min.js"></script>
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.min.js"></script>
+
 <script>
 
 // ============ GSAP INIT ============
@@ -774,9 +773,8 @@ function initThreeBackground(){
 
 // ============ LANDING PAGE ============
 function initLanding(){
-  // Splitting + GSAP hero
-  try{Splitting({target:'.hero-headline',by:'words'})}catch(e){}
-  gsap.from(".hero-headline .word",{y:40,opacity:0,duration:0.7,stagger:0.1,ease:"bankEase",delay:0.3});
+  // GSAP hero animation
+  gsap.from(".hero-headline",{y:40,opacity:0,duration:0.7,ease:"bankEase",delay:0.3});
 
   // Typed.js
   setTimeout(()=>{
@@ -804,21 +802,25 @@ function initLanding(){
   }});
   scrollTriggerInstances.push(navST);
 
-  // Stats CountUp with IntersectionObserver
+  // Stats CountUp with IntersectionObserver — real data from NexaBank database
   let statsAnimated=false;
   const statsObs=new IntersectionObserver((entries)=>{
     if(entries[0].isIntersecting&&!statsAnimated){
       statsAnimated=true;
+      const accs=getAccounts();
+      const txns=getTxns();
+      const totalBal=accs.reduce((s,a)=>s+a.balance,0);
+      const activeCount=accs.filter(a=>a.status==='Active').length;
       try{
-        new countUp.CountUp('stat-1',24000000,{prefix:'₹',suffix:'+',separator:',',duration:1.8,useEasing:true}).start();
-        new countUp.CountUp('stat-2',120000,{suffix:'+',separator:',',duration:1.8}).start();
+        new countUp.CountUp('stat-1',totalBal,{prefix:'₹',suffix:'',separator:',',duration:1.8,useEasing:true}).start();
+        new countUp.CountUp('stat-2',activeCount,{suffix:' Accounts',duration:1.8}).start();
         new countUp.CountUp('stat-3',99.98,{suffix:'%',decimalPlaces:2,duration:1.8}).start();
-        new countUp.CountUp('stat-4',0,{suffix:' Cases',duration:1}).start();
+        new countUp.CountUp('stat-4',txns.length,{suffix:' Transactions',duration:1}).start();
       }catch(e){
-        document.getElementById('stat-1').textContent='₹2.4 Cr+';
-        document.getElementById('stat-2').textContent='1.2 Lakh+';
+        document.getElementById('stat-1').textContent='₹'+totalBal.toLocaleString('en-IN');
+        document.getElementById('stat-2').textContent=activeCount+' Accounts';
         document.getElementById('stat-3').textContent='99.98%';
-        document.getElementById('stat-4').textContent='Zero';
+        document.getElementById('stat-4').textContent=txns.length+' Transactions';
       }
     }
   },{threshold:0.3});
@@ -871,8 +873,7 @@ function initCreate(){
     reader.readAsDataURL(file);
   };
 
-  // Splitting on step headings
-  try{Splitting({target:'#page-create [data-splitting]',by:'words'})}catch(e){}
+
 }
 
 function updateIdMask(){
@@ -1001,7 +1002,7 @@ function initSuccess(){
   try{
     lottie.loadAnimation({container:lc,renderer:window.innerWidth<768?'canvas':'svg',
       loop:false,autoplay:true,path:'https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json'});
-  }catch(e){lc.innerHTML='<i class="ph-bold ph-check-circle" style="font-size:80px;color:var(--success)"></i>'}
+  }catch(e){lc.innerHTML='<i class="fa-solid fa-circle-check" style="font-size:80px;color:var(--success)"></i>'}
 
   // GSAP stagger
   gsap.from('#lottie-check',{scale:0,duration:0.6,ease:"bankEase"});
@@ -1347,8 +1348,39 @@ function doLogout(){
   navigateTo('landing');
 }
 
+// ============ SEED REAL DATA FROM JAVA SYSTEM ============
+function seedDatabaseIfEmpty(){
+  if(getAccounts().length>0) return; // already seeded
+  const accounts=[
+    {accNo:'672817',username:'victor',mpin:'5092',name:'Ivin Baiju',dob:'2008-03-15',gender:'Male',nationality:'Indian',phone:'9891435981',email:'ivin@nexabank.in',address:'Bennett University',city:'Greater Noida',state:'Uttar Pradesh',pinCode:'201310',idType:'Aadhaar',idNumber:'4821 7734 9910',accountType:'Savings',balance:10000,status:'Active',dateOpened:'2026-03-14',photo:''},
+    {accNo:'487848',username:'devgupta_7',mpin:'3994',name:'Dev Gupta',dob:'2007-06-22',gender:'Male',nationality:'Indian',phone:'6392826558',email:'dev.gupta@nexabank.in',address:'Vivek Nagar',city:'Lucknow',state:'Uttar Pradesh',pinCode:'226010',idType:'Aadhaar',idNumber:'7632 1198 4455',accountType:'Savings',balance:2300,status:'Active',dateOpened:'2026-03-14',photo:''},
+    {accNo:'783769',username:'satveekg',mpin:'4744',name:'Satveek Gupta',dob:'2007-09-10',gender:'Male',nationality:'Indian',phone:'7307770998',email:'satveek@nexabank.in',address:'Bennett University',city:'Greater Noida',state:'Uttar Pradesh',pinCode:'201310',idType:'PAN',idNumber:'BKPSG4421J',accountType:'Savings',balance:2000,status:'Active',dateOpened:'2026-03-14',photo:''},
+    {accNo:'335758',username:'yuvraj_b',mpin:'2842',name:'Yuvraj Bedi',dob:'2008-01-05',gender:'Male',nationality:'Indian',phone:'7892323022',email:'yuvraj@nexabank.in',address:'Bennett University',city:'Greater Noida',state:'Uttar Pradesh',pinCode:'201310',idType:'Aadhaar',idNumber:'5512 3387 6601',accountType:'Savings',balance:0,status:'Active',dateOpened:'2026-03-14',photo:''},
+    {accNo:'816132',username:'Lucas',mpin:'7071',name:'Luke',dob:'2007-04-18',gender:'Male',nationality:'Indian',phone:'6767676767',email:'luke@nexabank.in',address:'New York',city:'New York',state:'Other',pinCode:'100001',idType:'Passport',idNumber:'K7291034',accountType:'Current',balance:5000,status:'Active',dateOpened:'2026-03-16',photo:''},
+    {accNo:'131372',username:'ivin',mpin:'4044',name:'Ivin',dob:'2008-03-15',gender:'Male',nationality:'Indian',phone:'9891435981',email:'ivin.b@nexabank.in',address:'Bennett University',city:'Greater Noida',state:'Uttar Pradesh',pinCode:'201310',idType:'Aadhaar',idNumber:'9981 2234 5567',accountType:'Savings',balance:5000,status:'Active',dateOpened:'2026-03-16',photo:''}
+  ];
+  saveAccounts(accounts);
+
+  const transactions=[
+    {accNo:'672817',date:'2026-03-14',time:'05:15 PM',type:'Deposit',amount:10000},
+    {accNo:'487848',date:'2026-03-14',time:'05:18 PM',type:'Deposit',amount:10000},
+    {accNo:'487848',date:'2026-03-14',time:'05:19 PM',type:'Withdrawal',amount:7700},
+    {accNo:'783769',date:'2026-03-14',time:'05:22 PM',type:'Deposit',amount:1000},
+    {accNo:'783769',date:'2026-03-14',time:'05:22 PM',type:'Deposit',amount:1000},
+    {accNo:'335758',date:'2026-03-14',time:'05:36 PM',type:'Deposit',amount:1000000},
+    {accNo:'335758',date:'2026-03-14',time:'05:37 PM',type:'Deposit',amount:1777},
+    {accNo:'335758',date:'2026-03-14',time:'05:37 PM',type:'Withdrawal',amount:1001777},
+    {accNo:'816132',date:'2026-03-16',time:'01:23 PM',type:'Deposit',amount:5000},
+    {accNo:'131372',date:'2026-03-16',time:'02:36 PM',type:'Deposit',amount:5000}
+  ];
+  saveTxns(transactions);
+}
+
 // ============ INIT ON LOAD ============
 document.addEventListener('DOMContentLoaded',()=>{
+  // Seed real data from Java banking system
+  seedDatabaseIfEmpty();
+
   // Check existing session
   const session=getSession();
   if(session){
