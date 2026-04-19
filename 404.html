@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>NexaBank — Page Not Found</title>
+  <script>
+    // GitHub Pages SPA redirect — sends all routes back to index.html
+    const path = window.location.pathname;
+    const repo = path.split('/')[1]; // gets the repo name from the URL
+    window.location.replace('/' + repo + '/');
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #F7F5F0;
+      color: #1A1A2E;
+      text-align: center;
+    }
+    .container { padding: 40px; }
+    h1 { font-size: 48px; margin-bottom: 8px; }
+    p { color: #6B7280; font-size: 18px; margin-bottom: 24px; }
+    a {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #1B4FFF;
+      color: #fff;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <p>Redirecting you to NexaBank...</p>
+    <a href="./">Go to Home</a>
+  </div>
+</body>
+</html>
