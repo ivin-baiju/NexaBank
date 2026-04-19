@@ -243,7 +243,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
 <canvas id="three-canvas"></canvas>
 <nav class="navbar" id="main-navbar">
   <a class="nav-logo" href="#" onclick="navigateTo('landing')">
-    <div class="nav-monogram">NB</div>
+    <div class="nav-monogram" style="background:transparent; color:var(--accent); font-size:32px; width:auto; height:auto;"><i class="fa-solid fa-building-columns"></i></div>
     <span class="nav-wordmark">NexaBank</span>
   </a>
   <div class="nav-actions">
@@ -319,7 +319,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
 <div id="page-create" class="page">
 <div class="create-header">
   <a class="nav-logo" href="#" onclick="navigateTo('landing')">
-    <div class="nav-monogram">NB</div><span class="nav-wordmark">NexaBank</span>
+    <div class="nav-monogram" style="background:transparent; color:var(--accent); font-size:32px; width:auto; height:auto;"><i class="fa-solid fa-building-columns"></i></div><span class="nav-wordmark">NexaBank</span>
   </a>
   <button class="btn btn-ghost btn-sm" onclick="navigateTo('landing')"><i class="fa-solid fa-arrow-left"></i> Back</button>
 </div>
@@ -507,7 +507,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
 <div id="page-login" class="page login-page">
   <div id="particles-js"></div>
   <div class="login-card" id="login-card">
-    <div style="text-align:center;margin-bottom:24px"><div class="nav-monogram" style="margin:0 auto 16px;width:48px;height:48px;font-size:20px;border-radius:12px">NB</div></div>
+    <div style="text-align:center;margin-bottom:24px"><div class="nav-monogram" style="margin:0 auto 16px; background:transparent; color:var(--accent); font-size:48px; width:auto; height:auto;"><i class="fa-solid fa-building-columns"></i></div></div>
     <h2>Welcome back</h2>
     <p class="login-subtitle">Enter your credentials to continue</p>
     <div class="form-group">
@@ -537,12 +537,13 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
 <div id="page-dashboard" class="page dashboard-page">
   <aside class="dash-sidebar">
     <div class="dash-sidebar-logo">
-      <div class="nav-monogram">NB</div><span class="nav-wordmark">NexaBank</span>
+      <div class="nav-monogram" style="background:transparent; color:var(--accent); font-size:32px; width:auto; height:auto;"><i class="fa-solid fa-building-columns"></i></div><span class="nav-wordmark">NexaBank</span>
     </div>
     <nav class="dash-nav">
       <div class="dash-nav-item active" data-tab="overview" onclick="switchTab('overview')"><i class="fa-solid fa-house"></i> Overview</div>
       <div class="dash-nav-item" data-tab="deposit" onclick="switchTab('deposit')"><i class="fa-solid fa-arrow-up"></i> Deposit</div>
       <div class="dash-nav-item" data-tab="withdraw" onclick="switchTab('withdraw')"><i class="fa-solid fa-arrow-down"></i> Withdraw</div>
+      <div class="dash-nav-item" data-tab="transfer" onclick="switchTab('transfer')"><i class="fa-solid fa-money-bill-transfer"></i> Transfer</div>
       <div class="dash-nav-item" data-tab="statement" onclick="switchTab('statement')"><i class="fa-solid fa-receipt"></i> Statement</div>
       <div class="dash-nav-item" data-tab="account" onclick="switchTab('account')"><i class="fa-solid fa-gear"></i> Account</div>
     </nav>
@@ -592,6 +593,16 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
       </div>
     </div>
 
+    <!-- Tab: Transfer -->
+    <div class="dash-tab-content" id="tab-transfer">
+      <div class="dash-form-card">
+        <h3><i class="fa-solid fa-money-bill-transfer" style="color:var(--accent)"></i> Transfer Money</h3>
+        <div class="form-group"><label>Receiver's Account No / Username</label><input type="text" class="form-input" id="inp-tr-receiver" placeholder="Account number or username"></div>
+        <div class="form-group"><label>Amount</label><input type="number" class="form-input" id="inp-tr-amount" placeholder="Enter amount" min="1"></div>
+        <button class="btn btn-accent" style="width:100%" onclick="doTransfer()">Transfer</button>
+      </div>
+    </div>
+
     <!-- Tab: Statement -->
     <div class="dash-tab-content" id="tab-statement">
       <div class="stat-card"><h3 style="margin-bottom:16px">Full Statement</h3>
@@ -617,6 +628,7 @@ textarea.form-input{border-radius:16px;min-height:80px;resize:vertical}
       <div class="bottom-tab active" data-tab="overview" onclick="switchTab('overview')"><i class="fa-solid fa-house"></i><span>Home</span></div>
       <div class="bottom-tab" data-tab="deposit" onclick="switchTab('deposit')"><i class="fa-solid fa-arrow-up"></i><span>Deposit</span></div>
       <div class="bottom-tab" data-tab="withdraw" onclick="switchTab('withdraw')"><i class="fa-solid fa-arrow-down"></i><span>Withdraw</span></div>
+      <div class="bottom-tab" data-tab="transfer" onclick="switchTab('transfer')"><i class="fa-solid fa-money-bill-transfer"></i><span>Transfer</span></div>
       <div class="bottom-tab" data-tab="statement" onclick="switchTab('statement')"><i class="fa-solid fa-receipt"></i><span>History</span></div>
       <div class="bottom-tab" data-tab="account" onclick="switchTab('account')"><i class="fa-solid fa-gear"></i><span>Account</span></div>
     </div>
@@ -773,8 +785,7 @@ function initThreeBackground(){
 
 // ============ LANDING PAGE ============
 function initLanding(){
-  // GSAP hero animation
-  gsap.from(".hero-headline",{y:40,opacity:0,duration:0.7,ease:"bankEase",delay:0.3});
+  // Removed GSAP from hero headline to prevent blank text on load errors
 
   // Typed.js
   setTimeout(()=>{
@@ -1122,8 +1133,8 @@ function initDashboard(){
 
   // Stats
   const txns=getTxns().filter(t=>t.accNo===acc.accNo);
-  const totalDep=txns.filter(t=>t.type==='Deposit').reduce((s,t)=>s+t.amount,0);
-  const totalWd=txns.filter(t=>t.type==='Withdrawal').reduce((s,t)=>s+t.amount,0);
+  const totalDep=txns.filter(t=>t.type==='Deposit'||t.type==='Transfer In').reduce((s,t)=>s+t.amount,0);
+  const totalWd=txns.filter(t=>t.type==='Withdrawal'||t.type==='Transfer Out').reduce((s,t)=>s+t.amount,0);
   document.getElementById('stat-deposited').textContent='₹'+totalDep.toLocaleString('en-IN');
   document.getElementById('stat-withdrawn').textContent='₹'+totalWd.toLocaleString('en-IN');
   document.getElementById('stat-txncount').textContent=txns.length;
@@ -1198,7 +1209,7 @@ function renderChart(txns){
   const wdData=new Array(12).fill(0);
   txns.forEach(t=>{
     const m=new Date(t.date).getMonth();
-    if(t.type==='Deposit')depData[m]+=t.amount;
+    if(t.type==='Deposit'||t.type==='Transfer In')depData[m]+=t.amount;
     else wdData[m]+=t.amount;
   });
 
@@ -1236,11 +1247,12 @@ function renderTxnTable(tbodyId,txns){
     return;
   }
   tb.innerHTML=txns.map(t=>{
-    const cls=t.type==='Deposit'?'credit':'debit';
-    const sign=t.type==='Deposit'?'+':'−';
+    const cls=(t.type==='Deposit'||t.type==='Transfer In')?'credit':'debit';
+    const sign=(t.type==='Deposit'||t.type==='Transfer In')?'+':'−';
+    const icon=(t.type==='Deposit'||t.type==='Transfer In')?'↑':'↓';
     return `<tr>
       <td>${t.date}</td><td>${t.time}</td>
-      <td><span class="txn-type ${cls}">${t.type==='Deposit'?'↑':'↓'} ${t.type}</span></td>
+      <td><span class="txn-type ${cls}">${icon} ${t.type}</span></td>
       <td style="font-weight:600;color:${cls==='credit'?'var(--success)':'var(--danger)'}">${sign}₹${t.amount.toLocaleString('en-IN')}</td>
     </tr>`;
   }).join('');
@@ -1283,14 +1295,56 @@ function doWithdraw(){
   refreshDashData();
 }
 
+function doTransfer(){
+  const session=getSession();if(!session)return;
+  const receiverId=document.getElementById('inp-tr-receiver').value.trim();
+  const amt=parseFloat(document.getElementById('inp-tr-amount').value);
+  
+  if(!receiverId){notyf.error('❌ Enter receiver account or username');return}
+  if(!amt||amt<=0){notyf.error('❌ Enter a valid amount');return}
+  
+  const accs=getAccounts();
+  const sender=accs.find(a=>a.accNo===session.accNo);
+  if(!sender)return;
+  
+  if(sender.username===receiverId || sender.accNo===receiverId){
+    notyf.error('❌ You cannot transfer to yourself');return;
+  }
+  
+  const receiver=accs.find(a=>(a.accNo===receiverId||a.username===receiverId)&&a.status==='Active');
+  if(!receiver){
+    notyf.error('❌ Receiver account not found or inactive');return;
+  }
+  
+  if(amt>sender.balance){notyf.error('❌ Insufficient balance for transfer');return}
+  
+  sender.balance-=amt;
+  receiver.balance+=amt;
+  saveAccounts(accs);
+  
+  const txns=getTxns();
+  const now=new Date();
+  const dateStr=now.toISOString().split('T')[0];
+  const timeStr=now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+  
+  txns.push({accNo:sender.accNo,date:dateStr,time:timeStr,type:'Transfer Out',amount:amt});
+  txns.push({accNo:receiver.accNo,date:dateStr,time:timeStr,type:'Transfer In',amount:amt});
+  saveTxns(txns);
+  
+  notyf.success('✅ ₹'+amt.toLocaleString('en-IN')+' transferred to '+receiver.name);
+  document.getElementById('inp-tr-receiver').value='';
+  document.getElementById('inp-tr-amount').value='';
+  refreshDashData();
+}
+
 function refreshDashData(){
   const session=getSession();if(!session)return;
   const accs=getAccounts();
   const acc=accs.find(a=>a.accNo===session.accNo);if(!acc)return;
   updateBalance(acc.balance);
   const txns=getTxns().filter(t=>t.accNo===acc.accNo);
-  const totalDep=txns.filter(t=>t.type==='Deposit').reduce((s,t)=>s+t.amount,0);
-  const totalWd=txns.filter(t=>t.type==='Withdrawal').reduce((s,t)=>s+t.amount,0);
+  const totalDep=txns.filter(t=>t.type==='Deposit'||t.type==='Transfer In').reduce((s,t)=>s+t.amount,0);
+  const totalWd=txns.filter(t=>t.type==='Withdrawal'||t.type==='Transfer Out').reduce((s,t)=>s+t.amount,0);
   document.getElementById('stat-deposited').textContent='₹'+totalDep.toLocaleString('en-IN');
   document.getElementById('stat-withdrawn').textContent='₹'+totalWd.toLocaleString('en-IN');
   document.getElementById('stat-txncount').textContent=txns.length;

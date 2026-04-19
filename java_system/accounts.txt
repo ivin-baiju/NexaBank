@@ -2,6 +2,6 @@ ACC_NO     USERNAME        MPIN     NAME                 AGE   PHONE           A
 672817     victor          5092     Ivin_Baiju           18    9891435981      Bennett_University             10000.00     ACTIVE    
 487848     devgupta_7      3994     Dev_Gupta            19    6392826558      Vivek_Nagar                    2300.00      ACTIVE    
 783769     satveekg        4744     Satveek_Gupta        19    7307770998      Bennett_University             2000.00      ACTIVE    
-335758     yuvraj          2842     yuvrj_bedi           18    7892323022      bennett                        0.00         ACTIVE    
+335758     	     2842     yuvrj_bedi           18    7892323022      bennett                        0.00         ACTIVE    
 816132     Lucas           7071     Luke                 19    6767676767      New_York                       5000.00      ACTIVE    
 131372     ivin            4044     Ivin                 18    9891435981      Bennett                        5000.00      ACTIVE    

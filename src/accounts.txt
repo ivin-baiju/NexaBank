@@ -1,1 +1,0 @@
-ACC_NO     USERNAME        MPIN     NAME                 AGE   PHONE           ADDRESS                        BALANCE      STATUS    
